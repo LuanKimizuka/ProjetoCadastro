@@ -1,0 +1,17 @@
+Sessão é uma forma de armazenar 
+Informações no servidor
+para comparilhar entre páginas
+
+1. INICIAÇÂO Sessão
+if(session_status() !=
+    PHP_SESSION_ACTIVE)
+{
+        session_start();
+}
+
+2. GRAVANDO VALORES NA SESSÃO
+$_SESSION['chave'] = 'valor';
+$_SESSION['nome_usuario'] = 'Moliro';
+
+3. LEITURA DE VALORES NA SESSÃO
+echo $_SESSION['nome_usuario'];
