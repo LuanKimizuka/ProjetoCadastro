@@ -11,8 +11,10 @@ CREATE TABLE usuario
     nome_usuario varchar(50) NOT NULL,
     email_usuario varchar(50) NOT NULL,
     fone_usuario varchar(30) NULL,
-    senha_usuario varchar(30) NOT NULL
+    senha_usuario varchar(30) NOT NULL,
+    foto		  varchar(100) NULL
 );
+
 
 -- INSERIR DADOS
 

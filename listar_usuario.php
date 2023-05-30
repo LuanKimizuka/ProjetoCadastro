@@ -24,6 +24,7 @@
             <tr>
                 <th>Código</th>
                 <th>Nome</th>
+                <th>Foto</th>
                 <th>E-mail</th>
                 <th>Telefone</th>
                 <th>Alterar</th>
@@ -34,6 +35,11 @@
                         echo "<tr>";
                         echo "<td>".$row['id_usuario']."</td>"; 
                         echo "<td>".$row['nome_usuario']."</td>"; 
+                        if($row['foto'] == "")
+                            echo "<td></td>";
+                        else   
+                            echo "<td><img src='".$row['foto'].
+                                 "' width='130' height='110'/></td>";
                         echo "<td>".$row['email_usuario']."</td>"; 
                         echo "<td>".$row['fone_usuario']."</td>";
                         echo "<td><a href='altera_usuario.php?id_usuario="

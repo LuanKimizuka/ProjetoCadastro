@@ -1,5 +1,6 @@
 <?php 
     include('conexao.php');
+
     $id_usuario = $_GET['id_usuario'];
     $sql = "SELECT * FROM usuario where id_usuario=$id_usuario";
     $result = mysqli_query($con,$sql);
@@ -17,7 +18,7 @@
 <body>
     <!-- https://localhost/projetocadastro/altera_usuario.php?id_usuario-1 -->
     <h1>CADASTRO DE USUÁRIOS - IFSP </h1>
-    <form action="altera_usuario_exe.php" method="post">
+    <form action="altera_usuario_exe.php" method="post" enctype="multipart/form-data">
         <input name="id_usuario" type="hidden"
                 value="<?php echo $row['id_usuario'] ?>">
         <div>
@@ -42,6 +43,7 @@
             <input type="password" name="senha" id="senha"
             value="<?php echo $row['senha_usuario']?>">
         </div>
+        <div><input type="file" name="foto" id="foto" accept="image/*"></div>
         <input type="submit" value="Salvar">
     </form>
 </body>
